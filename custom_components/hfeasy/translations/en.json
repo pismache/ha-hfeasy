@@ -1,0 +1,62 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "HFeasy plug",
+        "description": "Local HTTP control of a plug running the HFeasy firmware.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "name": "Name",
+          "username": "Username",
+          "password": "Password"
+        },
+        "data_description": {
+          "host": "IP address or host name of the plug.",
+          "port": "HTTP port of the plug (8080 by default).",
+          "username": "Leave empty if the plug's web page is not password protected."
+        }
+      },
+      "reconfigure": {
+        "title": "Change plug connection",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "username": "Username",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Plug credentials",
+        "description": "The plug at {host} rejected the credentials. Enter them again.",
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot reach the plug, or it does not answer like an HFeasy plug.",
+      "invalid_auth": "Wrong username or password.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This plug is already configured.",
+      "reauth_successful": "Credentials updated.",
+      "reconfigure_successful": "Connection updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        },
+        "data_description": {
+          "scan_interval": "How often the plug state is read (5 to 3600 s)."
+        }
+      }
+    }
+  }
+}

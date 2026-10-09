@@ -1,0 +1,62 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Prise HFeasy",
+        "description": "Pilotage HTTP local d'une prise équipée du firmware HFeasy.",
+        "data": {
+          "host": "Adresse",
+          "port": "Port",
+          "name": "Nom",
+          "username": "Identifiant",
+          "password": "Mot de passe"
+        },
+        "data_description": {
+          "host": "Adresse IP ou nom d'hôte de la prise.",
+          "port": "Port HTTP de la prise (8080 par défaut).",
+          "username": "Laisser vide si la page web de la prise n'est pas protégée par mot de passe."
+        }
+      },
+      "reconfigure": {
+        "title": "Modifier la connexion à la prise",
+        "data": {
+          "host": "Adresse",
+          "port": "Port",
+          "username": "Identifiant",
+          "password": "Mot de passe"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Identifiants de la prise",
+        "description": "La prise {host} a refusé les identifiants. Saisissez-les à nouveau.",
+        "data": {
+          "username": "Identifiant",
+          "password": "Mot de passe"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Prise injoignable, ou elle ne répond pas comme une prise HFeasy.",
+      "invalid_auth": "Identifiant ou mot de passe incorrect.",
+      "unknown": "Erreur inattendue."
+    },
+    "abort": {
+      "already_configured": "Cette prise est déjà configurée.",
+      "reauth_successful": "Identifiants mis à jour.",
+      "reconfigure_successful": "Connexion mise à jour."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "scan_interval": "Intervalle d'interrogation (secondes)"
+        },
+        "data_description": {
+          "scan_interval": "Fréquence de lecture de l'état de la prise (5 à 3600 s)."
+        }
+      }
+    }
+  }
+}
